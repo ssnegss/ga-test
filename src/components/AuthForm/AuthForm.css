@@ -1,0 +1,40 @@
+.auth-form {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   top: 150px;
+   gap: 15px;
+   max-width: 320px;
+   padding: 20px 40px;
+   background-color: #128c7e;
+   border-radius: 15px;
+   margin-inline: auto;
+
+   input {
+      width: 230px;
+      padding: 12px 15px;
+      border-radius: 50px;
+      border: unset;
+   }
+
+   button {
+      background-color: #ece5dd;
+      border-radius: 50px;
+      border: unset;
+      padding: 10px 30px;
+      color: black;
+      cursor: pointer;
+      transition: all 0.1s ease-in;
+
+      &:hover {
+        background-color: #075e54;
+        color: white;
+      }
+   }
+}
+
+.auth-form__title {
+   font-size: 2rem;
+   color: white;
+}
