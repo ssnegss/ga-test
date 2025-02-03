@@ -3,12 +3,14 @@ export const fetchInstance = async (
    idInstance: string,
    apiTokenInstance: string
 ) => {
-   const response = await fetch(
-      `${apiUrl}/waInstance${idInstance}/getSettings/${apiTokenInstance}`
-   );
+   try {
+      const response = await fetch(
+         `${apiUrl}/waInstance${idInstance}/getSettings/${apiTokenInstance}`
+      );
 
-   const data = await response.json();
-   console.log(data);
-
-   return data;
+      const data = await response.json();
+      return data;
+   } catch (e) {
+      console.error(e);
+   }
 };
