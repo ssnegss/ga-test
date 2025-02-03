@@ -4,6 +4,7 @@
 
 body {
    background-image: url("./assets/bg.jpg");
+   background-size: 45%;
    background-repeat: repeat;
    height: 100vh;
    padding-inline: 20px;
@@ -68,13 +69,19 @@ body {
    position: relative;
    bottom: 0;
    background-color: #075e54;
-   background-image: url('./assets/chat-bg.jpg');
+   background-image: url("./assets/chat-bg.jpg");
    background-size: 60%;
    max-width: 700px;
    margin-inline: auto;
 }
 
 .chat__history {
+   position: relative;
+   overflow: auto;
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
 }
 
 .chat__bottom {
@@ -98,4 +105,21 @@ body {
       box-shadow: none;
       resize: none;
    }
+}
+
+.chat__message {
+   display: flex;
+}
+
+.chat__message--me {
+   justify-content: flex-end;
+}
+
+.chat__message-text {
+   gap: 20px;
+   background-color: white;
+   padding: 10px 30px;
+   border-radius: 50px;
+   width: max-content;
+   max-width: 300px;
 }
