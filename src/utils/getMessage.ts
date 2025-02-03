@@ -13,7 +13,6 @@ export const getMessage = async (
          }
       );
       const data = await response.json();
-      console.log(data);
 
       if (data) {
          if (
